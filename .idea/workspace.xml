@@ -1,4 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc3d1980-9718-42e9-a2c1-aec1e2d334ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/gerenciadordespesaspessoais/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/gerenciadordespesaspessoais/src/main/java/br/com/yagos/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/gerenciadordespesaspessoais/src/test/java/br/com/yagos/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/gerenciadordespesaspessoais/target/classes/br/com/yagos/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/gerenciadordespesaspessoais/target/test-classes/br/com/yagos/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../testejava/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../testejava/src/main/java/com/yagos/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../testejava/src/test/java/com/yagos/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../testejava/target/classes/com/yagos/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../testejava/target/test-classes/com/yagos/ListaDeContatosTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "yagops0"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/yagops0/ListaDeContatosJava",
+    "accountId": "eca4d2f8-4a42-4698-8f3e-cc9955bf5eac"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2qT0aYFI7932UlOszFWtrievTCH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc3d1980-9718-42e9-a2c1-aec1e2d334ac" name="Changes" comment="" />
+      <created>1734671323439</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734671323439</updated>
+    </task>
+    <servers />
+  </component>
 </project>
