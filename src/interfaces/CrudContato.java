@@ -5,9 +5,11 @@ import classes.Contato;
 import java.util.List;
 
 public interface CrudContato {
-    public void create(Contato contato);
+    public int retornarIndice(Contato c);
+    public boolean existeContato(String nome);
+    public boolean create(Contato contato);
     public Contato read(String nome);
-    public void update(Contato contato);
-    public void delete(String nome);
+    public boolean update(Contato contato);
+    public boolean delete(Contato contato);
     public List<Contato> listAll();
 }
