@@ -29,4 +29,14 @@ public class PessoaFisica extends Contato{
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
+    @Override
+    public String toString(){
+        return " / Nome: " + this.getNome() +
+                " / Tel: "  + this.getTelefone() +
+                " / Email: " + this.getEmail() +
+                " / Endereco: " + this.getEndereco() +
+                " / Cpf: " + this.cpf +
+                " / Data Nascimento: " + this.dataNascimento;
+    }
 }

@@ -39,4 +39,15 @@ public class PessoaJuridica extends Contato{
     public void setNomeFantasia(String nomeFantasia) {
         this.nomeFantasia = nomeFantasia;
     }
+
+    @Override
+    public String toString(){
+        return " / Nome: " + this.getNome() +
+                " / Tel: "  + this.getTelefone() +
+                " / Email: " + this.getEmail() +
+                " / Endereco: " + this.getEndereco() +
+                " / Cnpj: " + this.cnpj +
+                " / Razao Social: " + this.razaoSocial +
+                " / Nome fantasia: " + this.nomeFantasia;
+    }
 }

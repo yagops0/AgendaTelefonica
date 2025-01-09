@@ -34,11 +34,11 @@ public class PessoaFisicaController implements CrudContato {
 
     @Override
     public boolean create(Contato pf){
-        if(!existeContato(pf.getNome())){
-            this.contatos.add(pf);
-            return true;
+        if(existeContato(pf.getNome())){
+            return false;
         }
-        return false;
+        this.contatos.add(pf);
+        return true;
     }
 
     @Override
