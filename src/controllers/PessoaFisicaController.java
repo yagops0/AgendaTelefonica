@@ -15,7 +15,7 @@ public class PessoaFisicaController implements CrudContato {
     @Override
     public boolean existeContato(String nome) {
         for(Contato c : this.contatos){
-            if(c.getNome().equals(nome)){
+            if(c.getNome().equalsIgnoreCase(nome)){
                 return true;
             }
         }
