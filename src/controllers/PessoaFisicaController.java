@@ -13,9 +13,9 @@ public class PessoaFisicaController implements CrudContato {
 
 
     @Override
-    public boolean existeContato(String nome) {
+    public boolean existeContato(String tel) {
         for(Contato c : this.contatos){
-            if(c.getNome().equalsIgnoreCase(nome)){
+            if(c.getTelefone().equalsIgnoreCase(tel)){
                 return true;
             }
         }
@@ -25,7 +25,7 @@ public class PessoaFisicaController implements CrudContato {
     @Override
     public int retornarIndice(Contato pf){
         for(Contato c : this.contatos){
-            if(existeContato(pf.getNome())){
+            if(existeContato(pf.getTelefone())){
                 return this.contatos.indexOf(c);
             }
         }
@@ -34,7 +34,7 @@ public class PessoaFisicaController implements CrudContato {
 
     @Override
     public boolean create(Contato pf){
-        if(existeContato(pf.getNome())){
+        if(existeContato(pf.getTelefone())){
             return false;
         }
         this.contatos.add(pf);
@@ -42,9 +42,9 @@ public class PessoaFisicaController implements CrudContato {
     }
 
     @Override
-    public Contato read(String nome) {
+    public Contato read(String tel) {
         for(Contato c : this.contatos){
-            if(c.getNome().equals(nome)){
+            if(existeContato(c.getTelefone())){
                 return c;
             }
         }
@@ -54,7 +54,7 @@ public class PessoaFisicaController implements CrudContato {
 
     @Override
     public boolean update(Contato pf) {
-        if(existeContato(pf.getNome())){
+        if(existeContato(pf.getTelefone())){
             int indice = retornarIndice(pf);
             this.contatos.set(indice, pf);
             return true;
@@ -64,7 +64,7 @@ public class PessoaFisicaController implements CrudContato {
 
     @Override
     public boolean delete(Contato pf) {
-        if(existeContato(pf.getNome())){
+        if(existeContato(pf.getTelefone())){
             int indice = retornarIndice(pf);
             this.contatos.remove(indice);
             return true;

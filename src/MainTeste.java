@@ -14,8 +14,6 @@ public class MainTeste {
         int escolha, escolhaAdd;
         char continuar, continuarAdd;
         PessoaFisicaController pfc = new PessoaFisicaController();
-        PessoaFisica pf = new PessoaFisica();
-        PessoaJuridica pj = new PessoaJuridica();
         System.out.println("TESTES");
 
         do{
@@ -41,6 +39,7 @@ public class MainTeste {
                         ent.nextLine();
                         switch (escolhaAdd){
                             case 1:
+                                PessoaFisica pf = new PessoaFisica();
                                 System.out.println("Pessoa fisica");
                                 System.out.println("Nome: ");
                                 pf.setNome(ent.nextLine());
@@ -59,6 +58,7 @@ public class MainTeste {
                                 ent.nextLine();
                                 break;
                             case 2:
+                                PessoaJuridica pj = new PessoaJuridica();
                                 System.out.println("Pessoa Juridica");
                                 System.out.println("Nome: ");
                                 pj.setNome(ent.nextLine());
