@@ -9,7 +9,7 @@ public interface CrudContato{
     public int retornarIndice(Contato c);
     public boolean existeContato(String tel);
     public boolean create(Contato contato);
-    public Contato read(String nome);
+    public Contato read(String tel);
     public boolean update(Contato contato);
     public boolean delete(Contato contato);
     public List<Contato> listAll();

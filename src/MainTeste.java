@@ -13,10 +13,12 @@ public class MainTeste {
         Scanner ent = new Scanner(System.in);
         int escolha, escolhaAdd;
         char continuar, continuarAdd;
+        String telefone;
         PessoaFisicaController pfc = new PessoaFisicaController();
         System.out.println("TESTES");
 
         do{
+
             System.out.println("====================================================");
             System.out.println("MENU ESCOLHA");
             System.out.println("1 - Add");
@@ -33,13 +35,14 @@ public class MainTeste {
             switch (escolha){
                 case 1:
                     do{
+                        PessoaFisica pf = new PessoaFisica();
+                        PessoaJuridica pj = new PessoaJuridica();
                         System.out.println("Add");
                         System.out.println("Contato Pessoa Fisica ou Pessoa Juridica");
                         escolhaAdd = ent.nextInt();
                         ent.nextLine();
                         switch (escolhaAdd){
                             case 1:
-                                PessoaFisica pf = new PessoaFisica();
                                 System.out.println("Pessoa fisica");
                                 System.out.println("Nome: ");
                                 pf.setNome(ent.nextLine());
@@ -55,10 +58,8 @@ public class MainTeste {
                                 pf.setDataNascimento(ent.nextLine());
                                 String retornoPf = pfc.create(pf) ? "Adicionado" : "Não adicionado";
                                 System.out.println(retornoPf);
-                                ent.nextLine();
                                 break;
                             case 2:
-                                PessoaJuridica pj = new PessoaJuridica();
                                 System.out.println("Pessoa Juridica");
                                 System.out.println("Nome: ");
                                 pj.setNome(ent.nextLine());
@@ -85,8 +86,16 @@ public class MainTeste {
                     ent.nextLine();
                     break;
                 case 2:
-                    //a
-                    System.out.println("b");
+                    System.out.println("Read");
+                    System.out.println("Digite o telefone que deseja pesquisar: ");
+                    telefone = ent.nextLine();
+
+                    if(pfc.read(telefone) != null){
+                        System.out.println("Contato encontrado: " + pfc.read(telefone).toString());
+                    }
+                    else{
+                        System.out.println("Contato não encontrado");
+                    }
                     break;
                 case 3:
                     System.out.println("c");

@@ -48,7 +48,6 @@ public class PessoaFisicaController implements CrudContato {
                 return c;
             }
         }
-
         return null;
     }
 
