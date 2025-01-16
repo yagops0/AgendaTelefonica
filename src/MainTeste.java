@@ -98,7 +98,31 @@ public class MainTeste {
                     }
                     break;
                 case 3:
-                    System.out.println("c");
+                    System.out.println("Update");
+                    System.out.println("Escolha que tipo de contato deseja atualizar: ");
+                    escolhaAdd = ent.nextInt();
+
+                    switch (escolhaAdd){
+                        case 1:
+                            System.out.println("Atualizar pessoa fisica: ");
+                            System.out.println("Digite o telefone do contato que deseja atualizar: ");
+                            telefone = ent.nextLine();
+                            System.out.println("Nome: ");
+                            pf.setNome(ent.nextLine());
+                            System.out.println("Cpf: ");
+                            pf.setCpf(ent.nextLine());
+                            System.out.println("Tel: ");
+                            pf.setTelefone(ent.nextLine());
+                            System.out.println("Email: ");
+                            pf.setEmail(ent.nextLine());
+                            System.out.println("Endereco: ");
+                            pf.setEndereco(ent.nextLine());
+                            System.out.println("data nascimento: ");
+                            pf.setDataNascimento(ent.nextLine());
+                            String mensagem = pfc.update(pf) ? "Atualizado" : "Não atualizado";
+                            System.out.println(mensagem);
+                            break;
+                    }
                     break;
                 case 4:
                     System.out.println("d");
