@@ -101,26 +101,38 @@ public class MainTeste {
                     System.out.println("Update");
                     System.out.println("Escolha que tipo de contato deseja atualizar: ");
                     escolhaAdd = ent.nextInt();
+                    ent.nextLine();
 
                     switch (escolhaAdd){
                         case 1:
                             System.out.println("Atualizar pessoa fisica: ");
                             System.out.println("Digite o telefone do contato que deseja atualizar: ");
                             telefone = ent.nextLine();
-                            System.out.println("Nome: ");
-                            pf.setNome(ent.nextLine());
-                            System.out.println("Cpf: ");
-                            pf.setCpf(ent.nextLine());
-                            System.out.println("Tel: ");
-                            pf.setTelefone(ent.nextLine());
-                            System.out.println("Email: ");
-                            pf.setEmail(ent.nextLine());
-                            System.out.println("Endereco: ");
-                            pf.setEndereco(ent.nextLine());
-                            System.out.println("data nascimento: ");
-                            pf.setDataNascimento(ent.nextLine());
-                            String mensagem = pfc.update(pf) ? "Atualizado" : "Não atualizado";
-                            System.out.println(mensagem);
+
+                            if(pfc.read(telefone) != null){
+                                System.out.println("Contato: ");
+                                System.out.println("- " + pfc.read(telefone).toString());
+                                PessoaFisica pf = (PessoaFisica) pfc.read(telefone);
+                                System.out.println("Pessoa fisica");
+                                System.out.println("Nome: ");
+                                pf.setNome(ent.nextLine());
+                                System.out.println("Cpf: ");
+                                pf.setCpf(ent.nextLine());
+                                System.out.println("Tel: ");
+                                pf.setTelefone(ent.nextLine());
+                                System.out.println("Email: ");
+                                pf.setEmail(ent.nextLine());
+                                System.out.println("Endereco: ");
+                                pf.setEndereco(ent.nextLine());
+                                System.out.println("data nascimento: ");
+                                pf.setDataNascimento(ent.nextLine());
+                                String mensagemAt = pfc.update(pf) ? "Atualizado" : "Não atualizado";
+                                System.out.println(mensagemAt);
+
+                            }
+                            else{
+                                System.out.println("Erro");
+                            }
                             break;
                     }
                     break;

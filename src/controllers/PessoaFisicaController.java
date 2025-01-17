@@ -26,7 +26,7 @@ public class PessoaFisicaController implements CrudContato {
     public int retornarIndice(Contato pf){
         for(Contato c : this.contatos){
             if(existeContato(pf.getTelefone())){
-                return this.contatos.indexOf(c);
+                return this.contatos.indexOf(pf);
             }
         }
         return -1;
@@ -44,7 +44,7 @@ public class PessoaFisicaController implements CrudContato {
     @Override
     public Contato read(String tel) {
         for(Contato c : this.contatos){
-            if(existeContato(c.getTelefone())){
+            if(existeContato(c.getTelefone()) && c.getTelefone().equals(tel)){
                 return c;
             }
         }

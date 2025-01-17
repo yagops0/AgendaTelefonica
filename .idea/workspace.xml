@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cc3d1980-9718-42e9-a2c1-aec1e2d334ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Generics/Box.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainTeste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTeste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/CrudContato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/CrudContato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/PessoaFisicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/PessoaFisicaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../GerenciadorDespesasPessoais/gerenciadordespesaspessoais/pom.xml" beforeDir="false" />
