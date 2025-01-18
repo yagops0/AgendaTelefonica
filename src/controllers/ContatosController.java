@@ -1,13 +1,12 @@
 package controllers;
 
 import classes.Contato;
-import classes.PessoaFisica;
 import interfaces.CrudContato;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PessoaFisicaController implements CrudContato {
+public class ContatosController implements CrudContato {
     private List<Contato> contatos = new ArrayList<>();
 
 
@@ -73,6 +72,7 @@ public class PessoaFisicaController implements CrudContato {
 
     @Override
     public List<Contato> listAll() {
+
         return this.contatos;
     }
 }

@@ -1,7 +1,7 @@
 import classes.Contato;
 import classes.PessoaFisica;
 import classes.PessoaJuridica;
-import controllers.PessoaFisicaController;
+import controllers.ContatosController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class MainTeste {
         int escolha, escolhaAdd;
         char continuar, continuarAdd;
         String telefone;
-        PessoaFisicaController pfc = new PessoaFisicaController();
+        ContatosController cc = new ContatosController();
         System.out.println("TESTES");
 
         do{
@@ -56,7 +56,7 @@ public class MainTeste {
                                 pf.setEndereco(ent.nextLine());
                                 System.out.println("data nascimento: ");
                                 pf.setDataNascimento(ent.nextLine());
-                                String retornoPf = pfc.create(pf) ? "Adicionado" : "Não adicionado";
+                                String retornoPf = cc.create(pf) ? "Adicionado" : "Não adicionado";
                                 System.out.println(retornoPf);
                                 break;
                             case 2:
@@ -90,8 +90,8 @@ public class MainTeste {
                     System.out.println("Digite o telefone que deseja pesquisar: ");
                     telefone = ent.nextLine();
 
-                    if(pfc.read(telefone) != null){
-                        System.out.println("Contato encontrado: " + pfc.read(telefone).toString());
+                    if(cc.read(telefone) != null){
+                        System.out.println("Contato encontrado: " + cc.read(telefone).toString());
                     }
                     else{
                         System.out.println("Contato não encontrado");
@@ -109,10 +109,10 @@ public class MainTeste {
                             System.out.println("Digite o telefone do contato que deseja atualizar: ");
                             telefone = ent.nextLine();
 
-                            if(pfc.read(telefone) != null){
+                            if(cc.read(telefone) != null){
                                 System.out.println("Contato: ");
-                                System.out.println("- " + pfc.read(telefone).toString());
-                                PessoaFisica pf = (PessoaFisica) pfc.read(telefone);
+                                System.out.println("- " + cc.read(telefone).toString());
+                                PessoaFisica pf = (PessoaFisica) cc.read(telefone);
                                 System.out.println("Pessoa fisica");
                                 System.out.println("Nome: ");
                                 pf.setNome(ent.nextLine());
@@ -126,7 +126,7 @@ public class MainTeste {
                                 pf.setEndereco(ent.nextLine());
                                 System.out.println("data nascimento: ");
                                 pf.setDataNascimento(ent.nextLine());
-                                String mensagemAt = pfc.update(pf) ? "Atualizado" : "Não atualizado";
+                                String mensagemAt = cc.update(pf) ? "Atualizado" : "Não atualizado";
                                 System.out.println(mensagemAt);
 
                             }
@@ -137,10 +137,15 @@ public class MainTeste {
                     }
                     break;
                 case 4:
-                    System.out.println("d");
+                    System.out.println("Delete");
+                    System.out.println("Remover contato: ");
+                    System.out.println("Digite o telefone do contato que deseja excluir: ");
+                    telefone = ent.nextLine();
+                    String mensagem = cc.delete(cc.read(telefone)) ? "Removido" : "Não removido";
+                    System.out.println(mensagem);
                     break;
                 case 5:
-                    for(Contato c : pfc.listAll()){
+                    for(Contato c : cc.listAll()){
                         System.out.println(c);
                     }
                     break;
