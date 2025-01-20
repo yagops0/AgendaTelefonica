@@ -22,22 +22,23 @@ public class ContatosController implements CrudContato {
     }
 
     @Override
-    public int retornarIndice(Contato pf){
-        for(Contato c : this.contatos){
-            if(existeContato(pf.getTelefone())){
-                return this.contatos.indexOf(pf);
+    public int retornarIndice(Contato c){
+        for(Contato co : this.contatos){
+            if(existeContato(c.getTelefone())){
+                return this.contatos.indexOf(c);
             }
         }
         return -1;
     }
 
     @Override
-    public boolean create(Contato pf){
-        if(existeContato(pf.getTelefone())){
-            return false;
+    public boolean create(Contato c){
+        if(!existeContato(c.getTelefone())){
+            this.contatos.add(c);
+            return true;
         }
-        this.contatos.add(pf);
-        return true;
+
+        return false;
     }
 
     @Override
@@ -51,19 +52,19 @@ public class ContatosController implements CrudContato {
     }
 
     @Override
-    public boolean update(Contato pf) {
-        if(existeContato(pf.getTelefone())){
-            int indice = retornarIndice(pf);
-            this.contatos.set(indice, pf);
+    public boolean update(Contato c) {
+        if(existeContato(c.getTelefone())){
+            int indice = retornarIndice(c);
+            this.contatos.set(indice, c);
             return true;
         }
         return false;
     }
 
     @Override
-    public boolean delete(Contato pf) {
-        if(existeContato(pf.getTelefone())){
-            int indice = retornarIndice(pf);
+    public boolean delete(Contato c) {
+        if(existeContato(c.getTelefone())){
+            int indice = retornarIndice(c);
             this.contatos.remove(indice);
             return true;
         }

@@ -75,6 +75,8 @@ public class MainTeste {
                                 pj.setRazaoSocial(ent.nextLine());
                                 System.out.println("nome fantasia: ");
                                 pj.setNomeFantasia(ent.nextLine());
+                                String retornoPj = cc.create(pj) ? "Adicionado" : "Não adicionado";
+                                System.out.println(retornoPj);
                                 break;
                             default:
                                 System.out.println("Opcao invalida");
@@ -127,6 +129,39 @@ public class MainTeste {
                                 System.out.println("data nascimento: ");
                                 pf.setDataNascimento(ent.nextLine());
                                 String mensagemAt = cc.update(pf) ? "Atualizado" : "Não atualizado";
+                                System.out.println(mensagemAt);
+
+                            }
+                            else{
+                                System.out.println("Erro");
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Atualizar pessoa jurídica: ");
+                            System.out.println("Digite o telefone do contato que deseja atualizar: ");
+                            telefone = ent.nextLine();
+
+                            if(cc.read(telefone) != null){
+                                System.out.println("Contato: ");
+                                System.out.println("- " + cc.read(telefone).toString());
+                                PessoaJuridica pj = (PessoaJuridica) cc.read(telefone);
+                                System.out.println("Pessoa fisica");
+                                System.out.println("Nome: ");
+                                pj.setNome(ent.nextLine());
+                                System.out.println("nome fantasia: ");
+                                pj.setNomeFantasia(ent.nextLine());
+                                System.out.println("Cpf: ");
+                                pj.setCnpj(ent.nextLine());
+                                System.out.println("Tel: ");
+                                pj.setTelefone(ent.nextLine());
+                                System.out.println("Email: ");
+                                pj.setEmail(ent.nextLine());
+                                System.out.println("Endereco: ");
+                                pj.setEndereco(ent.nextLine());
+                                System.out.println("razao social: ");
+                                pj.setRazaoSocial(ent.nextLine());
+
+                                String mensagemAt = cc.update(pj) ? "Atualizado" : "Não atualizado";
                                 System.out.println(mensagemAt);
 
                             }
